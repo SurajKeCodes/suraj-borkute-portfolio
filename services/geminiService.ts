@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { PERSONAL_INFO } from "../constants";
 
-const apiKey = process.env.API_KEY || '';
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
 let ai: GoogleGenAI | null = null;
 
 if (apiKey) {
